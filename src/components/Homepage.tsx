@@ -43,6 +43,7 @@ const Homepage = () => {
         </Title>
       </div>
       {/* <News simplified/> */}
+      <News />
     </>
   )
 }
