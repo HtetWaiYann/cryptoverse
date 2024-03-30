@@ -1,4 +1,4 @@
-import { Card, Row, Col, Input } from "antd";
+import { Card, Row, Col } from "antd";
 import millify from "millify";
 import { Link } from "react-router-dom";
 import { useGetCryptosQuery } from "../services/cryptoAPI";
@@ -11,7 +11,7 @@ const Cryptocurrencies = ({simplified = false } : {simplified: boolean}) => {
   const count = simplified ? 10 : 100;
 
   const { data: cryptoList, isFetching } = useGetCryptosQuery(count);
-  const [cryptos, setCryptos] = useState<Coin[] | undefined>(cryptoList?.data?.coins);
+  const [cryptos, _] = useState<Coin[] | undefined>(cryptoList?.data?.coins);
 
   if(isFetching) return "Loading...";
 
