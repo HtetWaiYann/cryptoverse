@@ -364,6 +364,8 @@ width: 70%;
 }
 .crypto-card .crypto-image{
     width:35px;
+    height: 35px;
+    object-fit: cover;
 }
 .select-timeperiod{
     width: 200px !important;
